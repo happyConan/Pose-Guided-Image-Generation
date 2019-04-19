@@ -10,7 +10,7 @@ from config import get_config
 from models import *
 
 def train(generator_one, generator_two, discriminator, L1_criterion, BCE_criterion, gen_train_op1, gen_train_op2, dis_train_op1, pose_loader, config):
-	if config.pretrained_path is not None:
+    if config.pretrained_path is not None:
 		generator_one.load_state_dict(torch.load(os.path.join(config.pretrained_path, 'train_generator_one')))
 		generator_two.load_state_dict(torch.load(os.path.join(config.pretrained_path, 'train_generator_two')))
 		discriminator.load_state_dict(torch.load(os.path.join(config.pretrained_path, 'train_discriminator')))
@@ -99,4 +99,4 @@ def main(config):
 
 if __name__ == "__main__":
     config, unparsed = get_config()
-	main(config)
+    main(config)

@@ -2,7 +2,6 @@ import torch
 import torch.optim as optim
 import torch.nn as nn
 
-from torch import cat
 import numpy as np
 
 class GeneratorCNN_Pose_UAEAfterResidual_256(nn.Module):
